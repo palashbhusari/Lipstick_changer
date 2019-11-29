@@ -6,8 +6,7 @@ Verions: pyhton 3.6.8 OpenCV 4.1.1
 
 Instructions to run this app/program on your machine:
 
-  1) YOU WILL NEDD THE DOOWING LIBRARIES INSTALLED ON YOU MACHINE:
-  
+  1) YOU WILL HAVE to INSTALL THE FOLLOWEING LIBRARIEs ON YOU MACHINE:
     OPENCV (follow https://solarianprogrammer.com/2016/09/17/install-opencv-3-with-python-3-on-windows/)
     DLIB (follow this tutorial to install dlib https://pysource.com/2019/03/20/how-to-install-dlib-for-python-3-on-windows/)
     
