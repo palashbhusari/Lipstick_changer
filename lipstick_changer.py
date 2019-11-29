@@ -1,9 +1,28 @@
-############### filling red color in the lips region
+
+###################### changing color using trackbars R G B
 import cv2
 import numpy as np
 import dlib
 
 lip_color=(0,0,255)
+############################
+def nothing(x):
+    pass
+# create trackbars for color change
+cv2.namedWindow('Frame')
+cv2.createTrackbar('R','Frame',0,255,nothing)
+cv2.createTrackbar('G','Frame',0,255,nothing)
+cv2.createTrackbar('B','Frame',0,255,nothing)
+
+
+def get_color():
+    # get current positions of four trackbars
+    r = cv2.getTrackbarPos('R','Frame')
+    g = cv2.getTrackbarPos('G','Frame')
+    b = cv2.getTrackbarPos('B','Frame')
+    #print((b,g,r))
+    return (b,g,r)
+#############################    
     
 cap = cv2.VideoCapture(0)
 
@@ -40,7 +59,10 @@ while True:
         cv2.fillPoly(frame, pts, lip_color)
         
     #print("hull = ",pts, type(pts))
-   
+
+    lip_color=get_color()
+    #print(lip_color)
+    
     cv2.imshow("Frame", frame)
 
     key = cv2.waitKey(1)
